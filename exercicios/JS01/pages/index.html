@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de JavaScript</title>
+    <link rel="stylesheet" href="../style/global.css">
+</head>
+<body>
+        <h1>Teste de Javascript</h1>
+        <div id="c1">(100, 100)</div>
+        <label for="ix1">X:</label>
+        <input
+        type="text"
+        name="x1"
+        id="ix1"
+        required
+        value="100">
+        <label for="iy1">Y:</label>
+        <input
+        type="text"
+        name="y1"
+        id="iy1"
+        required
+        value="100">
+        <button onclick="alterar()">Mudar</button>
+
+    <script>
+        function alterar(){
+        let objc = document.getElementById ("c1");
+        let objx = document.getElementById ("ix1");
+        let objy = document.getElementById ("iy1");
+        objc.style.left=`${objx.value}px`
+        objc.style.top=`${objy.value}px`
+        objc.innerHTML =`(${objx.value}, ${objy.value})`
+    }
+    </script>
+</body>
+</html>
